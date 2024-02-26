@@ -7,14 +7,19 @@ here is body...
 ## Causal Inference 
 domain knowledge
 
+## Data Processing
+
 ## Methodology
 ### PDA
 new page
+
 ### DICE
 new page
 
-## Data Processing
+## Result
 new page
 
-## Result
+## Application & Concern
+
+## Reference
 new page
