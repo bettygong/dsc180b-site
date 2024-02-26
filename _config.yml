@@ -1,8 +1,5 @@
-theme: jekyll-theme-cayman
-# show_edit_on_github: false
-# github:
-#   is_project_page: false
-github:
-  zip_url: https://github.com/bettygong/DSC180B-popularity-bias-in-Netflix-dataset.git
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+- jekyll-remote-theme
 title: Handel Popularity Bias in Recommender System
 description: Authors - Ziling Gong, Yihan Xue, Jiawei Wang
