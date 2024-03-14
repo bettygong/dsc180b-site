@@ -30,6 +30,7 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 - In the PD model, we completely remove popularity bias. We use $ELU(f(u,i))$, a user-item matching score, to indicate $P(Z|do(U, I))$, the probability of user behavior given user and item information. 
 - In the PDA model, we control the strength of popularity bias, which is a parameter $\gamma$. We use $ELU(f(u,i))*m_i^{\gamma}$ to estimate $P(C|do(U, I), do(Z))$, the probability of user behavior by intervening user & item and the popularity bias. Here $m_i$ is the popularity value of $Z=z$.
 - Then we optimize the BPR loss function to train the model.
+
 ![Image](images/pda.png)
 <p align="center"><em>Figure 2: PDA model task flow</em></p>
 
@@ -39,6 +40,7 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 - We separate dataset $O$ to two cause-specific datasets. $O_1$ is conformity-caused data, and $O_2$ is interest-caused data. 
 - We learn user and item embeddings separately in $O_1$ and $O_2$. Then we concatenate two embeddings to estimate clicks, ie. user behavior. 
 - Adopting multi-task curriculum learning, the final loss function is $L=L_{click}^{O_1+O_2}+\alpha*(L_{interest}^{O2}+L_{conformity}^{O_1+O_2})+ \beta * L_{discrepancy} $ 
+
 ![Image](images/dice.png)
 <p align="center"><em>Figure 3: DICE model task flow</em></p>
 
