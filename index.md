@@ -1,5 +1,4 @@
-# Causal Inference in Recommender System: 
-# Manipulating Popularity Bias
+# Causal Inference in Recommender System: Manipulating Popularity Bias
 
 The widespread use of recommender systems across various platforms has introduced a pervasive challenge - popularity bias. This bias overshadows personalized selections and limits the diversity of recommendation systems, as they tend to prioritize widely popular items, hindering the discovery of unpopular content that may better align with individual user preferences. 
 
