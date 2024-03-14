@@ -20,16 +20,27 @@ In Figure 1(a), the traditional recommendation methods take user information (U 
 
 However, in reality, a third factor, popularity (Z node) affects the interaction (C node) and the item information (I node). This Z variable is called a *confounder*, shown in Figure 1(b). To be specific, people have a conformity mentality that tends to follow the majority to choose purchase (**Z -> C**). So the more popular the items are, the more likely people will interact with them. On the other hand, recommender models tend to inherit the bias in the data to expose popular items more frequently (**Z -> I -> C**), which further exacerbates the popularity bias. The popularity (Z) that existed in the second path is a bias amplification and we want to remove or control the strength of it. 
 ![Image](images/pda_causal_graph.png)
-<p align="center"><em>Causal Relationship Between Popularity and User Click</em></p>
+<p align="center"><em>Figure 1: Causal Relationship Between Popularity and User Click</em></p>
 
 ## Data Processing
 
 ## Methodology
 ### PDA
-new page
+- Causal inference offers a solution to de-bias user behavior data and removes the influence of popularity, allowing recommendation systems to provide more equitable and unbiased suggestions. The predictive model is P(Z|do(U, I)), where do means intervention. 
+- In the PD model, we completely remove popularity bias. We use $ELU(f(u,i))$, a user-item matching score, to indicate $P(Z|do(U, I))$, the probability of user behavior given user and item information. 
+- In the PDA model, we control the strength of popularity bias, which is a parameter $\gamma$. We use $ELU(f(u,i))*m_i^{\gamma}$ to estimate $P(C|do(U, I), do(Z))$, the probability of user behavior by intervening user & item and the popularity bias. Here $m_i$ is the popularity value of $Z=z$.
+- Then we optimize the BPR loss function to train the model.
+![Image](images/pda.png)
+<p align="center"><em>Figure 2: PDA model task flow</em></p>
 
 ### DICE
-new page
+- The DICE model separates user interest (same idea as U in PDA) and conformity (same idea as Z in PDA) embeddings, from which popularity bias is considered as a cause of user behavior. 
+- The DICE methodology is a framework for disentangling user and item embeddings, which can be incorporated into other recommender models.
+- We separate dataset $O$ to two cause-specific datasets. $O_1$ is conformity-caused data, and $O_2$ is interest-caused data. 
+- We learn user and item embeddings separately in $O_1$ and $O_2$. Then we concatenate two embeddings to estimate clicks, ie. user behavior. 
+- Adopting multi-task curriculum learning, the final loss function is $L=L_{click}^{O_1+O_2}+\alpha*(L_{interest}^{O2}+L_{conformity}^{O_1+O_2})+ \beta * L_{discrepancy} $ 
+![Image](images/dice.png)
+<p align="center"><em>Figure 3: DICE model task flow</em></p>
 
 ## Result
 new page
