@@ -35,11 +35,21 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 <p align="center"><em>Figure 2: PDA model task flow</em></p>
 
 ### DICE
+<html>
+ <head>
+    <title>test</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+ 
+ <body>
+  <p> L=L_{click}^{O_1+O_2}+\alpha*(L_{interest}^{O2}+L_{conformity}^{O_1+O_2})+ \beta * L_{discrepancy} </p>
 - The DICE model separates user interest (same idea as U in PDA) and conformity (same idea as Z in PDA) embeddings, from which popularity bias is considered as a cause of user behavior. 
 - The DICE methodology is a framework for disentangling user and item embeddings, which can be incorporated into other recommender models.
 - We separate dataset $O$ to two cause-specific datasets. $O_1$ is conformity-caused data, and $O_2$ is interest-caused data. 
 - We learn user and item embeddings separately in $O_1$ and $O_2$. Then we concatenate two embeddings to estimate clicks, ie. user behavior. 
 - Adopting multi-task curriculum learning, the final loss function is $L=L_{click}^{O_1+O_2}+\alpha*(L_{interest}^{O2}+L_{conformity}^{O_1+O_2})+ \beta * L_{discrepancy} $ 
+ </body>
+</html>
 
 ![Image](images/dice.png)
 <p align="center"><em>Figure 3: DICE model task flow</em></p>
