@@ -19,6 +19,8 @@ Let's take a look at the popularity bias under causal relationships.
 In Figure 1(a), the traditional recommendation methods take user information (U node) and item information (I node) to account for the interaction, namely click (C node). This relationship form, **I -> C** and **U -> C**, is called the *collider effect*, that U and I are independent of each other, but both contribute to C.
 
 However, in reality, a third factor, popularity (Z node) affects the interaction (C node) and the item information (I node). This Z variable is called a *confounder*, shown in Figure 1(b). To be specific, people have a conformity mentality that tends to follow the majority to choose purchase (**Z -> C**). So the more popular the items are, the more likely people will interact with them. On the other hand, recommender models tend to inherit the bias in the data to expose popular items more frequently (**Z -> I -> C**), which further exacerbates the popularity bias. The popularity (Z) that existed in the second path is a bias amplification and we want to remove or control the strength of it. 
+![Image](images/pda_causal_graph.png)
+<p align="center"><em>Causal Relationship Between Popularity and User Click</em></p>
 
 ## Data Processing
 
