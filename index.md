@@ -36,6 +36,12 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
   <p>- Then we optimize the BPR loss function to train the model.</p>
 </body>
 </html>
+
+<!-- - Causal inference offers a solution to de-bias user behavior data and removes the influence of popularity, allowing recommendation systems to provide more equitable and unbiased suggestions. The predictive model is P(Z|do(U, I)), where do means intervention. 
+- In the PD model, we completely remove popularity bias. We use $ELU(f(u,i))$, a user-item matching score, to indicate $P(Z|do(U, I))$, the probability of user behavior given user and item information. 
+- In the PDA model, we control the strength of popularity bias, which is a parameter $\gamma$. We use $ELU(f(u,i))*m_i^{\gamma}$ to estimate $P(C|do(U, I), do(Z))$, the probability of user behavior by intervening user & item and the popularity bias. Here $m_i$ is the popularity value of $Z=z$.
+- Then we optimize the BPR loss function to train the model. -->
+
 ![Image](images/pda.png)
 <p align="center"><em>Figure 2: PDA model task flow</em></p>
 
