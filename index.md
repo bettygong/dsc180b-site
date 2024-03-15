@@ -29,7 +29,7 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 
 
 ## Methodology
-### PDA
+<h3 id="pda">PDA</h3>
 <html>
  <head>
  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -37,23 +37,19 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
  
 <body>
   <p>- Causal inference offers a solution to de-bias user behavior data and removes the influence of popularity, allowing recommendation systems to provide more equitable and unbiased suggestions. The predictive model is \( P(Z \vert \text{do}(U, I)) \), where "do" means intervention.
-
   <p>- In the PD model, we completely remove popularity bias. We use \( ELU(f(u,i)) \), a user-item matching score, to indicate \( P(Z \vert \text{do}(U, I)) \), the probability of user behavior given user and item information.
-
   <p>- In the PDA model, we control the strength of popularity bias, which is a parameter \( \gamma \). We use \( ELU(f(u,i))*m_i^{\gamma} \) to estimate \( P(C \vert \text{do}(U, I), \text{do}(Z)) \), the probability of user behavior by intervening user &amp; item and the popularity bias. Here \( m_i \) is the popularity value of \( Z=z \).
-
   <p>- Then we optimize the BPR loss function to train the model.</p>
+ 
 </body>
 </html>
 
 ![Image](images/pda.png)
 <p align="center"><em>Figure 2: PDA model task flow</em></p>
 
-### DICE
+<h3 id="dice">DICE</h3>
 <html>
- <head>
-    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  </head>
+ <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
  
  <body>
 
