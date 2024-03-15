@@ -27,7 +27,7 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 <html>
  <head>
     <title>test</title>
-<!--     <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
  
  <body>
