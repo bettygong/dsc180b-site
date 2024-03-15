@@ -24,6 +24,25 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 
 ## Data Processing
 
+<html>
+ <head>
+    <title>test</title>
+<!--     <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+  </head>
+ 
+ <body>
+
+    <p>- The DICE model separates user interest (same idea as U in PDA) and conformity (same idea as Z in PDA) embeddings, from which popularity bias is considered as a cause of user behavior.</p>
+    <p>- The DICE methodology is a framework for disentangling user and item embeddings, which can be incorporated into other recommender models.</p>
+    <p>- We separate dataset \( O \) to two cause-specific datasets. \( O_1 \) is conformity-caused data, and \( O_2 \) is interest-caused data.</p>
+    <p>- We learn user and item embeddings separately in \( O_1 \) and \( O_2 \). Then we concatenate two embeddings to estimate clicks, ie. user behavior.</p>
+    <p>- Adopting multi-task curriculum learning, the final loss function is \[ L = L_{\text{click}}^{O_1 + O_2} + \alpha \cdot (L_{\text{interest}}^{O_2} + L_{\text{conformity}}^{O_1 + O_2}) + \beta \cdot L_{\text{discrepancy}} \]</p>
+
+ </body>
+</html>
+
+
+
 ## Methodology
 ### PDA
 - Causal inference offers a solution to de-bias user behavior data and removes the influence of popularity, allowing recommendation systems to provide more equitable and unbiased suggestions. The predictive model is P(Z|do(U, I)), where do means intervention. 
