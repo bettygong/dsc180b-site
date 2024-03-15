@@ -43,10 +43,7 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 </body>
 
 <h3 id="dice">DICE</h3>
-<!--  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
- 
- <body>
-
+<body>
     <p>- The DICE model separates user interest (same idea as U in PDA) and conformity (same idea as Z in PDA) embeddings, from which popularity bias is considered as a cause of user behavior.</p>
     <p>- The DICE methodology is a framework for disentangling user and item embeddings, which can be incorporated into other recommender models.</p>
     <p>- We separate dataset \( O \) to two cause-specific datasets. \( O_1 \) is conformity-caused data, and \( O_2 \) is interest-caused data.</p>
@@ -56,14 +53,18 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 <img src="images/dice.png" alt="DICE model">
 <!-- ![Image](images/dice.png) -->
 <p align="center"><em>Figure 3: DICE model task flow</em></p>
- </body>
+</body>
 
 ## Result
+<h2>Result</h2>
 new page
 
 ## Application & Concern
+<h2>Application & Concern</h2>
 
 ## Reference
-- [Zhang, Yang, Fuli Feng, Xiangnan He, Tianxin Wei, Chonggang Song, Guohui Ling, and Yongdong Zhang.2021. “Causal intervention for leveraging popularity bias in recommendation.” In Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval.](https://arxiv.org/pdf/2105.06067.pdf)
+<h2>Reference</h2>
+<p>- <a href="https://arxiv.org/pdf/2105.06067.pdf">Zhang, Yang, Fuli Feng, Xiangnan He, Tianxin Wei, Chonggang Song, Guohui Ling, and Yongdong Zhang.2021. “Causal intervention for leveraging popularity bias in recommendation.” In Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval.</a> </p>
+<!-- <p>- [Zhang, Yang, Fuli Feng, Xiangnan He, Tianxin Wei, Chonggang Song, Guohui Ling, and Yongdong Zhang.2021. “Causal intervention for leveraging popularity bias in recommendation.” In Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval.](https://arxiv.org/pdf/2105.06067.pdf)</p> -->
  								
-- [Yu Zheng, Chen Gao, Xiang Li, Xiangnan He, Depeng Jin, Yong Li. 2021. Disentangling User Interest and Conformity for Recommendation with Causal Embedding. In Proceedings of the Web Conference 2021.](https://arxiv.org/pdf/2006.11011.pdf)
+<p>- [Yu Zheng, Chen Gao, Xiang Li, Xiangnan He, Depeng Jin, Yong Li. 2021. Disentangling User Interest and Conformity for Recommendation with Causal Embedding. In Proceedings of the Web Conference 2021.](https://arxiv.org/pdf/2006.11011.pdf)</p>
