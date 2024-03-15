@@ -23,10 +23,9 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 <p align="center"><em>Figure 1: Causal Relationship Between Popularity and User Click</em></p>
 
 ## Data Processing
+Two datasets, Douban and Netflix, are utilized for model comparison. Following the data cleaning phase, the Douban dataset retained 7,174,218 interactions involving 47,890 users and 26,047 items. The Netflix dataset comprises 122,958 unique users and 1,343 distinct items. 
 
-
-
-
+The PDA model involves temporal splitting to calculate popularity drift. The DICE model takes rating-5 entries as positive samples and artificially draws negative samples. 
 
 ## Methodology
 <h3 id="pda">PDA</h3>
@@ -57,7 +56,13 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 <h2>Result</h2>
 
 
-<h2>Application & Concern</h2>
+<h2>Application</h2>
+Mitigating popularity bias in recommender systems is essential for creating more personalized and diverse digital environments. This approach not only elevates user satisfaction by aligning recommendations more closely with individual preferences but also promotes a broader spectrum of content and products. It benefits various platforms, including e-commerce, content streaming, social media, and online advertising, by fostering equitable exposure for emerging talents and niche products.
+
+Key Benefits:
+Personalization: Tailors recommendations to reflect genuine user interests beyond mainstream popularity.
+Diversity: Expands the range of content, supporting a vibrant ecosystem of creators and vendors.
+Engagement: Enhances user engagement by providing relevant and intriguing content discoveries.
 
 
 <h2>Reference</h2>
