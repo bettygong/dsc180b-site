@@ -31,7 +31,6 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 ## Methodology
 <h3 id="pda">PDA</h3>
 <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<body>
   <p>- Causal inference offers a solution to de-bias user behavior data and removes the influence of popularity, allowing recommendation systems to provide more equitable and unbiased suggestions. The predictive model is \( P(Z \vert \text{do}(U, I)) \), where "do" means intervention.
   <p>- In the PD model, we completely remove popularity bias. We use \( ELU(f(u,i)) \), a user-item matching score, to indicate \( P(Z \vert \text{do}(U, I)) \), the probability of user behavior given user and item information.
   <p>- In the PDA model, we control the strength of popularity bias, which is a parameter \( \gamma \). We use \( ELU(f(u,i))*m_i^{\gamma} \) to estimate \( P(C \vert \text{do}(U, I), \text{do}(Z)) \), the probability of user behavior by intervening user &amp; item and the popularity bias. Here \( m_i \) is the popularity value of \( Z=z \).
@@ -40,7 +39,7 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 <img src="images/pda.png" alt="PDA model">
 <!--  ![Image](images/pda.png) -->
 <p align="center"><em>Figure 2: PDA model task flow</em></p>
-</body>
+
 
 <h3 id="dice">DICE</h3>
 <body>
@@ -55,14 +54,12 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 <p align="center"><em>Figure 3: DICE model task flow</em></p>
 </body>
 
-## Result
 <h2>Result</h2>
-new page
 
-## Application & Concern
+
 <h2>Application & Concern</h2>
 
-## Reference
+
 <h2>Reference</h2>
 <p>- Zhang, Yang, Fuli Feng, Xiangnan He, Tianxin Wei, Chonggang Song, Guohui Ling, and Yongdong Zhang.2021. “Causal intervention for leveraging popularity bias in recommendation.” In Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval.</p><a href="https://arxiv.org/pdf/2105.06067.pdf">click</a> 
 <!-- <p>- [Zhang, Yang, Fuli Feng, Xiangnan He, Tianxin Wei, Chonggang Song, Guohui Ling, and Yongdong Zhang.2021. “Causal intervention for leveraging popularity bias in recommendation.” In Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval.](https://arxiv.org/pdf/2105.06067.pdf)</p> -->
