@@ -54,7 +54,11 @@ The PDA model involves temporal splitting to calculate popularity drift. The DIC
 </body>
 
 <h2>Result</h2>
-<!-- ![Image](images/k20_recall_rate.png) -->
+<p>Our analysis of the PDA and DICE recommender system models shows distinct performances on Netflix and Douban, suggesting the influence of different user engagement patterns.</p>
+<p>On Netflix, known for its herd behavior where users often gravitate towards popular content, DICE excels (recall@20: 0.1906) by effectively differentiating between a user’s individual preferences and what’s trending. This distinction allows for popular recommendations without neglecting personal tastes.</p>
+<p>Douban, with its focus on thorough reviews and user reflection, particularly for books, sees the PDA model perform better (recall@20: 0.0565). Here, the PDA model prevents the amplification of popularity bias during training and judiciously incorporates popularity during inference, catering to Douban's distinct user interaction style, which favors more personalized engagement.</p>
+<p>The outcomes from both datasets underline the importance of tailoring recommender systems to match user behaviors and platform nuances. While DICE suits platforms where shared cultural trends heavily sway user choices, like Netflix, PDA is ideal for platforms that prioritize deep, individual engagement, like Douban. This nuanced approach is essential for creating recommender systems that offer both popular and individualized content recommendations.</p>
+<img src="images/k20_recall_rate.png" alt="result">
 <p align="center"><em>Figure 4: Recall@20 model comparison</em></p>
 
 <h2>Application</h2>
