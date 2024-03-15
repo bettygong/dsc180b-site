@@ -30,26 +30,20 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
 
 ## Methodology
 <h3 id="pda">PDA</h3>
-<html>
- <head>
- <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
- </head>
- 
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <body>
- 
   <p>- Causal inference offers a solution to de-bias user behavior data and removes the influence of popularity, allowing recommendation systems to provide more equitable and unbiased suggestions. The predictive model is \( P(Z \vert \text{do}(U, I)) \), where "do" means intervention.
   <p>- In the PD model, we completely remove popularity bias. We use \( ELU(f(u,i)) \), a user-item matching score, to indicate \( P(Z \vert \text{do}(U, I)) \), the probability of user behavior given user and item information.
   <p>- In the PDA model, we control the strength of popularity bias, which is a parameter \( \gamma \). We use \( ELU(f(u,i))*m_i^{\gamma} \) to estimate \( P(C \vert \text{do}(U, I), \text{do}(Z)) \), the probability of user behavior by intervening user &amp; item and the popularity bias. Here \( m_i \) is the popularity value of \( Z=z \).
   <p>- Then we optimize the BPR loss function to train the model.</p>
- 
-</body>
-</html>
 
-![Image](images/pda.png)
+<img src="images/pda.png" alt="PDA model">
+<!--  ![Image](images/pda.png) -->
 <p align="center"><em>Figure 2: PDA model task flow</em></p>
+</body>
 
 <h3 id="dice">DICE</h3>
- <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!--  <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
  
  <body>
 
@@ -58,11 +52,11 @@ However, in reality, a third factor, popularity (Z node) affects the interaction
     <p>- We separate dataset \( O \) to two cause-specific datasets. \( O_1 \) is conformity-caused data, and \( O_2 \) is interest-caused data.</p>
     <p>- We learn user and item embeddings separately in \( O_1 \) and \( O_2 \). Then we concatenate two embeddings to estimate clicks, ie. user behavior.</p>
     <p>- Adopting multi-task curriculum learning, the final loss function is \[ L = L_{\text{click}}^{O_1 + O_2} + \alpha \cdot (L_{\text{interest}}^{O_2} + L_{\text{conformity}}^{O_1 + O_2}) + \beta \cdot L_{\text{discrepancy}} \]</p>
-
- </body>
-
-![Image](images/dice.png)
+ 
+<img src="images/dice.png" alt="DICE model">
+<!-- ![Image](images/dice.png) -->
 <p align="center"><em>Figure 3: DICE model task flow</em></p>
+ </body>
 
 ## Result
 new page
