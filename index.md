@@ -57,12 +57,13 @@ The PDA model involves temporal splitting to calculate popularity drift. The DIC
 
 
 <h2>Application</h2>
-Mitigating popularity bias in recommender systems is essential for creating more personalized and diverse digital environments. This approach not only elevates user satisfaction by aligning recommendations more closely with individual preferences but also promotes a broader spectrum of content and products. It benefits various platforms, including e-commerce, content streaming, social media, and online advertising, by fostering equitable exposure for emerging talents and niche products.
+<p>Mitigating popularity bias in recommender systems is essential for creating more personalized and diverse digital environments. This approach not only elevates user satisfaction by aligning recommendations more closely with individual preferences but also promotes a broader spectrum of content and products. It benefits various platforms, including e-commerce, content streaming, social media, and online advertising, by fostering equitable exposure for emerging talents and niche products.</p>
 
-Key Benefits:
-Personalization: Tailors recommendations to reflect genuine user interests beyond mainstream popularity.
-Diversity: Expands the range of content, supporting a vibrant ecosystem of creators and vendors.
-Engagement: Enhances user engagement by providing relevant and intriguing content discoveries.
+<p>Key Benefits:\
+Personalization: Recommendations reflect genuine user interests beyond mainstream popularity.\
+Diversity: Expands the range of content, supporting a vibrant ecosystem of creators and vendors.\
+Engagement: Enhances user engagement by providing relevant and intriguing content discoveries.\
+</p>
 
 
 <h2>Reference</h2>
